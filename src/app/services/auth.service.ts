@@ -9,6 +9,15 @@ export class AuthService {
 
   constructor(public auth: AngularFireAuth) { }
 
+
+  initAuthListener(){
+    this.auth.authState.subscribe( fuser => {
+      console.log(fuser);
+      console.log(fuser?.email);
+    })
+  }
+
+
   crearUsuario( nombre: string, correo: string, password:string ){
 
     // console.log({nombre, correo, password});
