@@ -16,4 +16,11 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(correo, password);
   }
 
+  logInUsuario( correo: string, password:string ){
+
+    // console.log({nombre, password});
+
+    return this.auth.signInWithEmailAndPassword(correo, password);
+  }
+
 }
