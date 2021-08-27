@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { map } from 'rxjs/operators';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable({
@@ -35,6 +35,13 @@ export class AuthService {
 
   logout(){
     return this.auth.signOut();
+  }
+
+
+  isAuth(){
+    return this.auth.authState.pipe(
+      map( fuser => fuser != null)
+    )
   }
 
 }
