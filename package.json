@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~12.2.2",
     "@angular/platform-browser-dynamic": "~12.2.2",
     "@angular/router": "~12.2.2",
+    "@ngrx/store": "^12.4.0",
+    "@ngrx/store-devtools": "^12.4.0",
     "firebase": "^7.0 || ^8.0",
     "fs-extra": "^10.0.0",
     "rxjs": "~6.5.4",
